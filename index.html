@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              light: "#f8f9fa",
+              coffee: "#AD9970",
+              graytext: "#484848",
+              graytext3: "#89A7B3",
+              redcolor: "#DC1E24",
+              cardtext: "#212529",
+              white: "#fff",
+              blackishgray: "#767676",
+            },
+            screens: {},
+            backgroundImage: {
+              hero0: "url('./asset/hero-0.jpg')",
+              hero1: "url('./asset/hero-1.jpg')",
+              hero2: "url('./asset/hero-2.jpg')",
+              hero3: "url('./asset/hero-3.jpg')",
+              hero4: "url('./asset/hero-4.jpg')",
+              hero5: "url('./asset/hero-5.jpg')",
+              rectangle1: "url('./asset/rectangle-1.png')",
+              rectangle2: "url('./asset/rectangle-2.jpg')",
+              rectangle3: "url('./asset/rectangle-3.jpg')",
+              rectangle4: "url('./asset/rectangle-4.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <style></style>
+    <title>Rode Clone</title>
+  </head>
+  <body class="w-[100vw] bg-light">
+    <!-- Navigation bar -->
+    <header class="p-0 md:p-4 bg-[#ffffff] shadow bg-navcolor fixed w-[100vw]">
+      <nav class="container flex flex-row justify-around pt-3 top-0">
+        <div class="md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="rode-logo pl-28">
+          <svg
+            version="1.1"
+            id="Rode_Logo"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 792.9 220.2"
+            xml:space="preserve"
+            style="height: 24px"
+          >
+            <g>
+              <path
+                d="M179.8,69.2c0-39.4-38.8-63.6-74.9-63.6H0v208.7h62.8V113.4l48.4,99.2l0.8,1.5h71.3l-49.8-87.8
+                C162.2,118.2,179.8,96.5,179.8,69.2z M62.8,35.8h18.4c20,0,34,14.2,34,34.4c0,29.2-16.7,35-45.7,35h-6.9V35.8H62.8z"
+              ></path>
+              <polygon
+                points="717,181.1 717,123.8 785.4,123.8 785.4,90.5 717,90.5 717,39 789,39 789,5.6 654.3,5.6 654.3,214.3 792.9,214.3 
+                792.9,181.1 	"
+              ></polygon>
+              <path
+                d="M525.4,5.6H433v208.7h101.9c62.5,0,102.8-39.4,102.8-100.5C637.4,51.1,590.3,5.6,525.4,5.6z M572.6,105.5
+                c0,38.8-15.4,80.1-58.8,80.1h-20.9V34.2h18.8C553.8,34.2,572.6,70,572.6,105.5z"
+              ></path>
+              <path
+                d="M410.8,19.6L393.3,2.1l-21.5,21.5C353,8.9,328.8,0,302.3,0C240,0,191.4,48.3,191.4,110c0,26.7,9.2,50.9,24.6,69.8
+                l-21.1,21.1l17.5,17.5l21.3-21.3c18.8,14.4,42.5,23.1,68.6,23.1c62.3,0,110.9-48.2,110.9-109.9c0-26.3-8.8-50.2-23.8-68.8
+                L410.8,19.6z M302.4,27.3c19.4,0,30.7,12.7,37.3,28.6l-81.5,81.5c-1.5-10.4-1.9-20.4-1.9-27.5C256.3,85.2,260.9,27.3,302.4,27.3z
+                 M346.6,83.8c1.3,10,1.7,19.2,1.7,26.1c0,24.8-4.4,82.6-46.1,82.6c-19,0-30.2-12.1-36.9-27.7L346.6,83.8z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="nav-items">
+          <ul class="flex justify-between hidden md:flex space-x-9 grey-light">
+            <li><a href="#" rel="noopener noreferrer"></a>PRODUCTS</li>
+            <li><a href="#" rel="noopener noreferrer"></a>USER GUIDES</li>
+            <li><a href="#" rel="noopener noreferrer"></a>SOLUTIONS</li>
+            <li><a href="#" rel="noopener noreferrer"></a>APPAREL</li>
+            <li><a href="#" rel="noopener noreferrer"></a>SUPPORT</li>
+          </ul>
+        </div>
+        <div class="search">
+          <svg
+            data-v-bdd59cc4=""
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.4629 20.0231C15.6892 20.0231 19.9259 15.7646 19.9259 10.5115C19.9259 5.25846 15.6892 1 10.4629 1C5.2367 1 1 5.25846 1 10.5115C1 15.7646 5.2367 20.0231 10.4629 20.0231Z"
+              stroke="#484848"
+              stroke-width="2"
+              stroke-miterlimit="10"
+            ></path>
+            <path
+              d="M17.6455 17.6025L26.0002 26.0001"
+              stroke="#484848"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- hero section 0 The ultimate Studio Microphone -->
+      <section id="hero0">
+        <div
+          class="container0 bg-hero0 bg-cover bg-center md:h-[100vh] md:w-[100vw] flex items-center"
+        >
+          <div
+            class="flex flex-col mt-12 md:flex-col items-center text-center w-[300px] md:w-[600px] md:mx-16 md:gap-5"
+          >
+            <img
+              src="./asset/5th-gen-generic.svg"
+              alt="5th-gen-generic"
+              class="w-[250px] md:w-[500px]"
+            />
+            <h3 class="text-white text-[15px] md:text-[30px] text-center">
+              The Ultimate Studio Microphone
+            </h3>
+            <p class="text-[#FFFFFF80] text-[15px] md:text-[20px]">
+              The NT1 5th Generation fuses the classic sound of the iconic NT1
+              with cutting-edge technology – a true studio workhorse with XLR
+              and USB connectivity, 32-bit float recording, advanced DSP, and
+              more.
+            </p>
+            <div
+              class="btn flex mb-3 items-center justify-items-center flex-col md:flex-row md:w-[280px] gap-3 md:gap-7 font-bold content-center mt-5"
+            >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button class="text-coffee">LEARN MORE ></button></a
+              >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white bg-coffee px-6 pt-2 pb-2 rounded-full hover:bg-white hover:text-coffee"
+                >
+                  BUY NOW
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 1 NTH-100M -->
+      <section id="hero1">
+        <div
+          class="container1 bg-hero1 bg-cover bg-right md:bg-center md:w-[100vw] md:h-[100vh] flex items-center float-right"
+        >
+          <div
+            class="flex flex-col justify-center items-end md:items-center mx-16 text-center h-[100vh] w-[100vw] md:w-[38vw] gap-5"
+          >
+            <img
+              src="./asset/NTH-100M.svg"
+              alt="NTH-100M"
+              class="w-[250px] md:w-[500px]"
+            />
+            <h3 class="text-white md:text-[30px] text-center">
+              Hear and Be Heard With Incredible <br />
+              Audio
+            </h3>
+            <p class="text-[#FFFFFF80] w-[250px] text-center md:text-[18px]">
+              The NTH-100M is a professional over-ear headset that combines the
+              exceptional sonic performance and comfort of the award- NTH-100
+              headphones with a broadcast-quality headset microphone
+            </p>
+            <div
+              class="btn flex flex-col md:flex-row items-center justify-items-center w-[280px] gap-7 font-bold content-center mt-5"
+            >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button class="text-coffee">LEARN MORE ></button></a
+              >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white bg-coffee px-6 pt-2 pb-2 rounded-full hover:bg-white hover:text-coffee"
+                >
+                  BUY NOW
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 2 VIDEO MICRO -->
+      <section id="hero2">
+        <div
+          class="bg-hero2 md:h-[100vh] w-[100vw] bg-left bg-cover md:bg-center flex justify-end"
+        >
+          <div
+            class="container2 flex flex-col md:w-[650px] mt-8 justify-center items-center gap-5 bg-slate-100 bg-opacity-50 md:bg-opacity-0 p-2 float-right mr-8 md:mr-1 mb-28"
+          >
+            <img
+              alt=""
+              class="VideoMicro w-[250px] md:w-[500px]"
+              data-src="https://edge.rode.com/images/page/1/modules/7187/VideoMicroII_PL_P_03.svg"
+              src="https://edge.rode.com/images/page/1/modules/7187/VideoMicroII_PL_P_03.svg"
+            />
+            <h3 class="md:text-[28px] font-bold">
+              Small Size. Stunning Sound.
+            </h3>
+            <p
+              class="text-black md:text-graytext font-bold md:font-normal w-[250px] md:w-[595px] text-center text-[20px]"
+            >
+              The VideoMicro II is an ultra-compact and easy-to-use microphone
+              that will instantly elevate your camera or smartphone audio,
+              perfect for filmmaking, content creation, home videos, and more.
+            </p>
+            <div
+              class="btn flex items-center justify-items-center md:w-[280px] gap-4 md:gap-7 font-bold content-center mt-5"
+            >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button class="text-black md:text-coffee">
+                  LEARN MORE >
+                </button></a
+              >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-black md:text-white bg-coffee px-6 pt-2 pb-2 rounded-full hover:bg-white hover:text-coffee"
+                >
+                  BUY NOW
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 3 NT-USB+ -->
+      <section id="hero3">
+        <div
+          class="bg-hero3 h-[100vh] w-[100vw] bg-right md:bg-center bg-cover flex justify-end md:justify-start items-center"
+        >
+          <div
+            class="container3 flex flex-col w-[325px] md:w-[500px] justify-items-center items-center text-center bg-slate-100 bg-opacity-50 md:bg-opacity-0 p-2 mx-16 gap-5 font-bold"
+          >
+            <img
+              src="./asset/NT-USB.svg"
+              alt="USB image"
+              class="w-[350px] md:w-[500px]"
+            />
+            <h3 class="text-black md:text-white text-[28px]">
+              Sound Like a Pro
+            </h3>
+            <p class="text-black md:text-[#FFFFFF80] text-[20px]">
+              The NT-USB+ is a professional USB microphone with next-generation
+              features that make it easy for anyone to capture pristine,
+              studio-quality audio – from musicians to Podcasters.
+            </p>
+            <div
+              class="btn flex items-center justify-items-center w-[280px] gap-7 font-bold content-center mt-5"
+            >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button class="text-black md:text-coffee">
+                  LEARN MORE >
+                </button></a
+              >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-black md:text-white bg-coffee px-6 pt-2 pb-2 rounded-full hover:bg-white hover:text-coffee"
+                >
+                  BUY NOW
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 4 Streamers and gamers -->
+      <section id="hero4">
+        <div
+          class="bg-hero4 md:w-[100vw] md:h-[100vh] bg-center bg-cover flex flex-col items-center justify-center gap-1 md:gap-7"
+        >
+          <div class="container4">
+            <img
+              src="./asset/X image.svg"
+              alt="X banner"
+              class="w-[300px] md:w-[700px]"
+            />
+          </div>
+          <div class="btn md-p-0 p-4">
+            <a href="#" target="#" rel="noopener noreferrer"
+              ><button
+                type="submit"
+                class="bg-black font-bold text-redcolor pt-2 pb-2 px-5 rounded-full hover:bg-redcolor hover:text-black"
+              >
+                LEARN MORE
+              </button></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- hero section 5 RODECASTER PRO -->
+      <section id="hero5">
+        <div
+          class="bg-hero5 md:w-[100vw] md:h-[100vh] bg-center bg-cover flex md:justify-center justify-end items-end flex-col"
+        >
+          <div
+            class="container5 flex flex-col w-[300px] md:w-[650px] bg-slate-100 bg-opacity-50 md:bg-opacity-0 text-center items-center gap-2 md:gap-5 mx-16"
+          >
+            <img
+              src="./asset/RODECasterProII.svg"
+              alt="Rode cas"
+              class="w-[250px] md:w-[500px]"
+            />
+            <h3 class="text-white text-[15px] md:text-[25px]">
+              The Revolution Is Here
+            </h3>
+            <p
+              class="md:text-[#FFFFFF80] text-white text-[15px] md:text-[20px]"
+            >
+              The RØDECaster Pro II is the world's most powerful all-in-one
+              audio solution for streamers, podcasters, musicians, and creators.
+              Take your content to the next level.
+            </p>
+            <div
+              class="btn flex items-center justify-items-center md:w-[280px] gap-1 md:gap-7 font-bold content-center md:mt-5"
+            >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button class="text-black md:text-coffee">
+                  LEARN MORE >
+                </button></a
+              >
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-black md:text-white bg-coffee px-6 pt-2 pb-2 rounded-full hover:bg-white hover:text-coffee"
+                >
+                  BUY NOW
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 6 Latest From The RODE Blog -->
+      <section id="hero6">
+        <div
+          class="flex flex-col w-[100vw] md:px-8 py-4 md:py-8 mb-4 md:mb-16 bg-white"
+        >
+          <h2
+            class="text-center font-semibold text-[20px] md:text-[35px] text-coffee"
+          >
+            <a href="#">Latest From The RØDE Blog</a>
+          </h2>
+        </div>
+      </section>
+      <!-- hero section 7 Top 2 cards -->
+      <section id="hero7 h-[100vh]">
+        <div class="container-top">
+          <div class="cards flex flex-row justify-items-center gap-4 md:mx-28">
+            <div
+              class="card-left w-1/2 bg-white flex flex-col items-center ml-4"
+            >
+              <h3 class="text-center md:text-[25px]">
+                Introducing the NT1 5th Generation - The Ultimate Studio
+                Condenser Microphone
+              </h3>
+              <img src="./asset/card-1.jpg" alt="card-1" />
+              <h4 class="text-center text-[16px] mx-5 py-4 text-cardtext">
+                Revolutionary studio condenser microphone that fuses the classic
+                sound signature of the iconic NT1 with cutting-edge,
+                next-generation technology.
+              </h4>
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white font-bold bg-coffee mt-5 mb-5 px-4 pt-2 pb-2 rounded-full border-2 border-coffee hover:bg-white hover:text-coffee"
+                >
+                  LEARN MORE
+                </button>
+              </a>
+            </div>
+            <div class="card-right w-1/2 bg-white flex flex-col items-center">
+              <h3 class="text-center md:text-[25px]">
+                Introducing the NTH-100M Professional Over-ear Headset
+              </h3>
+              <img src="./asset/card-2.jpg" alt="card-2" />
+              <h4 class="text-center text-[16px] mx-5 py-4 text-cardtext">
+                The NTH-100M is a professional over-ear headset that combines
+                our award-winning NTH-100 headphones with a broadcast-quality
+                microphone.
+              </h4>
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white font-bold bg-coffee mt-5 px-4 pt-2 pb-2 rounded-full border-2 border-coffee hover:bg-white hover:text-coffee"
+                >
+                  LEARN MORE
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- hero section 8 Bottom 2 cards -->
+      <section id="hero8 h-[100vh]">
+        <div class="container-bottom my-6">
+          <div class="cards flex flex-row justify-items-center gap-4 md:mx-28">
+            <div class="card-left w-1/2 bg-white flex flex-col items-center">
+              <h3 class="text-center md:text-[25px]">
+                RØDECaster Pro II Firmware 1.1.1 Introduces Advanced Sub-mixing
+                and More
+              </h3>
+              <img src="./asset/card-3.jpg" alt="card-3" />
+              <h4 class="text-center text-[18px] mx-5 py-4 text-cardtext">
+                The latest major firmware update for the RØDECaster Pro II
+                introduces advanced sub-mixing and other <br />
+                enhancements for a flexible workflow.
+              </h4>
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white font-bold bg-coffee mt-5 mb-5 px-4 pt-2 pb-2 rounded-full border-2 border-coffee hover:bg-white hover:text-coffee"
+                >
+                  LEARN MORE
+                </button>
+              </a>
+            </div>
+            <div class="card-right w-1/2 bg-white flex flex-col items-center">
+              <h3 class="text-center md:text-[25px]">
+                Introducing New Wireless GO II Firmware: Camera Presets, Nested
+                Recordings and More
+              </h3>
+              <img src="./asset/card-4.jpg" alt="card-4" />
+              <h4 class="text-center text-[18px] mx-5 py-4 text-cardtext">
+                Here’s everything you need to know about the new Wireless GO II
+                and RØDE Central updates
+              </h4>
+              <a href="#" target="#" rel="noopener noreferrer"
+                ><button
+                  type="submit"
+                  class="text-white font-bold bg-coffee mt-10 px-4 pt-2 pb-2 rounded-full border-2 border-coffee hover:bg-white hover:text-coffee"
+                >
+                  LEARN MORE
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section 9 Explore the ROde Range product -->
+      <section id="hero9">
+        <div class="container9 md:mt-16 bg-white">
+          <div class="title9 h-[100px] flex flex-col justify-center">
+            <h2
+              class="font-semibold text-[18px] md:text-[36px] text-blackishgray text-center"
+            >
+              Explore The RØDE Range
+            </h2>
+          </div>
+          <div class="rectangle-container md:mx-32 flex flex-col space-y-10">
+            <div
+              class="rectangle1 bg-rectangle1 bg-cover bg-no-repeat hover:opacity-80"
+            >
+              <div class="text flex flex-row h-[150px] md:h-[300px]">
+                <img src="./asset/microphones.svg" alt="microphone images" />
+              </div>
+            </div>
+            <div
+              class="rectangle2 bg-rectangle2 bg-cover bg-no-repeat hover:opacity-80"
+            >
+              <div class="text flex flex-row h-[150px] md:h-[300px]">
+                <img src="./asset/mixer.svg" alt="Interface images" />
+              </div>
+            </div>
+            <div
+              class="rectangle3 bg-rectangle3 bg-cover bg-no-repeat hover:opacity-80"
+            >
+              <div class="text flex flex-row h-[150px] md:h-[300px]">
+                <img src="./asset/software.svg" alt="software images" />
+              </div>
+            </div>
+            <div
+              class="rectangle4 bg-rectangle4 bg-cover bg-no-repeat hover:opacity-80"
+            >
+              <div class="text flex flex-row h-[150px] md:h-[300px]">
+                <img src="./asset/access.svg" alt="Accessories image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="container-top h-[100px] bg-white mt-8 border-b border-coffee"
+      ></div>
+
+      <div
+        class="container-middle py-4 md:py-12 flex flex-col md:flex-row w-screen bg-white justify-between items-center"
+      >
+        <div class="col-1 md:mx-24">
+          <img src="./asset/RODE_logo.svg" alt="rode logo" class="w-[100px]" />
+        </div>
+        <div
+          class="col-2 flex display flex-col float-left md:flex-row justify-between text-[18px] gap-8 text-left text-blackishgray"
+        >
+          <div class="flex flex-col">
+            <h4 class="font-semibold mb-2 text-black">Products</h4>
+            <ul class="li">
+              <li>Microphones</li>
+              <li>Headphones</li>
+              <li>Interfaces and Mixers</li>
+              <li>Accessories</li>
+              <li>Software</li>
+              <li>Apparel</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-2 text-black">Support</h4>
+            <ul class="li">
+              <li>Contact RØDE</li>
+              <li>Service Centre</li>
+              <li>Warranty</li>
+              <li>Where to Buy</li>
+              <li>Authorised Dealers</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="li">
+              <h4 class="font-semibold mb-2 text-black">Company</h4>
+              <li>About RØDE</li>
+              <li>News and Info</li>
+              <li>Job Opportunities</li>
+              <h4 class="font-semibold mb-2 text-black">Account</h4>
+              <li>Manage your Account</li>
+              <li>Create Account</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 mx-24 flex flex-col items-center md:items-end">
+          <h1 class="font-semibold text-[30px] text-center md:text-right">
+            Subscribe to our <br />latest news and offers
+          </h1>
+          <button
+            type="submit "
+            class="text-white font-bold bg-coffee mt-10 px-4 pt-2 pb-2 rounded-full border-2 border-coffee hover:bg-white hover:text-coffee w-max"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+      <div class="border2 border-t border-coffee mx-28"></div>
+      <div
+        class="container-bottom h-[150px] flex flex-col items-center md:flex-row bg-white justify-around text-blackishgray pt-8"
+      >
+        <h4>© 2023 RØDE All Rights Reserved.</h4>
+        <h4>
+          Privacy Policy
+          <span>|</span>
+          Terms & Conditions
+        </h4>
+        <div
+          class="social text-[22px] w-[200px] flex flex-row gap-2 text-black"
+        >
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-tiktok"></i>
+
+          <svg
+            data-v-49b37e2d=""
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 219.5 75"
+            xml:space="preserve"
+            height="24px"
+            class="rodexLogo"
+          >
+            <g data-v-49b37e2d="" class="currentColor">
+              <polygon
+                data-v-49b37e2d=""
+                points="190.7,37.5 162,75 136.4,75 165.2,37.5 136.4,0 162,0 190.7,37.5"
+                class="fillColor1"
+              ></polygon>
+              <polygon
+                data-v-49b37e2d=""
+                points="194.9,32.1 219.5,0 193.9,0 182.1,15.4 194.9,32.1"
+                class="fillColor1"
+              ></polygon>
+              <polygon
+                data-v-49b37e2d=""
+                points="182.1,59.6 193.9,75 219.5,75 194.9,42.9 182.1,59.6"
+                class="fillColor1"
+              ></polygon>
+              <path
+                data-v-49b37e2d=""
+                d="M62.4,32.8c0.2,1.8,0.3,3.5,0.3,4.7c0,4.5-0.8,14.9-8.3,14.9c-3.4,0-5.4-2.2-6.6-5L62.4,32.8L62.4,32.8z
+            M54.4,22.6c3.5,0,5.5,2.3,6.7,5.2L46.4,42.4c-0.3-1.9-0.3-3.6-0.3-4.9C46.1,33,46.9,22.6,54.4,22.6L54.4,22.6z M73.9,21.3
+            l-3.1-3.1L66.9,22c-3.4-2.7-7.7-4.3-12.5-4.3c-11.2,0-19.9,8.7-19.9,19.8c0,4.8,1.6,9.1,4.4,12.5L35,53.8l3.1,3.1l3.8-3.8
+            c3.4,2.6,7.6,4.1,12.4,4.1c11.2,0,19.9-8.7,19.9-19.8c0-4.7-1.6-9-4.3-12.4L73.9,21.3L73.9,21.3z M103,36.7c0,7-2.8,14.4-10.6,14.4
+            h-3.8V23.9H92C99.6,23.9,103,30.3,103,36.7L103,36.7z M94.5,18.7H77.8v37.5h18.3c11.2,0,18.5-7.1,18.5-18.1
+            C114.6,26.9,106.1,18.7,94.5,18.7L94.5,18.7z M142.6,50.3v6h-24.9V18.7h25v6h-13.7V34h12.3v6h-12.3v10.3H142.6L142.6,50.3z
+            M11.3,24.2h3.3c3.6,0,6.1,2.5,6.1,6.2c0,5.3-3,6.3-8.2,6.3h-1.2V24.2L11.3,24.2z M32.3,30.2c0-7.1-7-11.4-13.5-11.4H0v37.5h11.3
+            V38.1L20,56l0.1,0.3h12.8L24,40.5C29.2,39,32.3,35.1,32.3,30.2L32.3,30.2z"
+                class="fillColor2"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
